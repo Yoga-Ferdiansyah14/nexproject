@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Geist', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background: #0ea5e9;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 0 0 2px #0ea5e9;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      background: #0ea5e9;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 0 0 2px #0ea5e9;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#2a4a5e",
+            "tertiary-fixed-dim": "#c8a0f0",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ef4444",
+            "on-surface-variant": "#64748b",
+            "surface-dim": "#f1f5f9",
+            "on-background": "#0f172a",
+            "surface-container": "#ffffff",
+            "on-primary-fixed": "#001f2e",
+            "on-error": "#ffffff",
+            "surface-container-high": "#f8fafc",
+            "secondary-fixed": "#c0d8e8",
+            "secondary-container": "#f1f5f9",
+            "on-secondary": "#0f172a",
+            "secondary": "#475569",
+            "primary-fixed": "#e0f2fe",
+            "on-secondary-fixed": "#0d1f2b",
+            "tertiary": "#8b5cf6",
+            "secondary-fixed-dim": "#88b4cc",
+            "primary": "#0ea5e9",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ede9fe",
+            "inverse-primary": "#0ea5e9",
+            "primary-fixed-dim": "#7dd3fc",
+            "surface": "#ffffff",
+            "on-tertiary-fixed": "#1e1b4b",
+            "inverse-surface": "#0f172a",
+            "error-container": "#fee2e2",
+            "on-primary-fixed-variant": "#0369a1",
+            "on-primary-container": "#0c4a6e",
+            "on-surface": "#0f172a",
+            "inverse-on-surface": "#ffffff",
+            "on-tertiary-fixed-variant": "#4338ca",
+            "surface-container-low": "#f8fafc",
+            "surface-container-highest": "#f1f5f9",
+            "tertiary-container": "#f5f3ff",
+            "surface-bright": "#ffffff",
+            "on-secondary-container": "#1e293b",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#e2e8f0",
+            "outline": "#94a3b8",
+            "on-tertiary-container": "#4c1d95",
+            "surface-variant": "#f1f5f9",
+            "primary-container": "#f0f9ff",
+            "surface-tint": "#0ea5e9",
+            "on-error-container": "#991b1b",
+            "background": "#f8fafc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "display": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-outline-variant bg-white flex flex-col p-4 gap-2 z-20">
+<div class="mb-8 px-3">
+<div class="text-xl font-headline font-bold tracking-tighter text-on-surface">NexProject</div>
+<div class="text-xs text-on-surface-variant">CV Fenomena</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="apartment">apartment</span>
+<span class="font-body text-sm font-medium">Projects</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 bg-primary-container text-primary rounded-lg px-3 py-2 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="font-body text-sm font-semibold">Tasks</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-body text-sm font-medium">Team</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary font-bold py-2 px-4 rounded-lg mb-4 active:scale-95 transition-transform duration-150">New Plan</button>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-body text-sm font-medium">Profile</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 border-b border-outline-variant bg-white/80 backdrop-blur-md z-10 flex justify-between items-center px-8">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm" data-icon="search">search</span>
+<input class="bg-surface-container-high border border-outline-variant rounded-full py-1.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary w-64" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="hover:bg-surface-container-highest rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-surface-container-highest rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<button class="text-secondary font-medium text-sm hover:text-on-surface transition-colors">Export Data</button>
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-full text-sm font-bold active:scale-95 transition-transform">Create Project</button>
+<img alt="User Avatar" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3sFLHbLmvFfITlVhdiYroSasFecJeWvTZL69jtswck22qnh65W9zihL86d0Pw6vASLN43761QVLSLUpxVS9gROVZEGU85pqszWLq7gtXsazEfDXlsvwABBlob4IuDc3crfSvOLP5liQF5Ot3BGDdlqJsIhMcaLtkAy5lqKp6YK8jQagV_jB9BlR8EKGLPg1gI8eP04b53YDjZEApMRGZrN1iAVYTYtFbCFtpGC-zwtvZF5V3IcYUDiBzDzrf7TVUbKti5oRUdr1E"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="mt-16 p-12 flex justify-center">
+<div class="max-w-2xl w-full">
+<!-- Progress Report Card (Light Mode Edit) -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<!-- Banner Section -->
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-angle wide shot of a massive architectural construction site during the golden hour. The scene is dominated by structured steel frames and industrial cranes reaching into a dusky sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmgDlyYsGIuXw2NyqSTIGb2IlQWKVekOvm-Ob7epU8P3fws68T9DnfpwC1RDpwYv5a5xoDLYgX1TWP_qIcN87gKW8lJyrWsRjG4mh5GL2T9e4l-5zzNhXAkrZigkOeWgVWLiSKpbOJWKmZ5cuNfWhcxxPpC54K-nK3SFYguO1xC0sRJtcsehw2nOIURuJhI57bxF0ujVDVPuhZtRo720VmrZ_4KGarqNXfcf2Tyh1wb3fPm4UCzjDh1uw70YPh1Vpe2Y-8EUGAMhM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
+<div class="absolute bottom-6 left-8">
+<h1 class="text-3xl font-display font-extrabold tracking-tight text-on-surface mb-1">Grand Nusantara Residencies</h1>
+<p class="text-secondary text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                Jakarta CBD • Civil Engineering Phase
+              </p>
+</div>
+</div>
+<!-- Input Form Section -->
+<div class="p-8 space-y-10">
+<!-- Week Stepper & Title -->
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-xl font-headline font-bold text-on-surface">Input Progress Report</h2>
+<p class="text-on-surface-variant text-sm">Please provide detailed updates for the current period.</p>
+</div>
+<div class="flex flex-col items-center gap-1 bg-surface-container-high p-3 rounded-lg border border-outline-variant">
+<span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Minggu ke-</span>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 rounded bg-white border border-outline-variant flex items-center justify-center hover:bg-surface-container-highest transition-colors active:scale-90">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="remove">remove</span>
+</button>
+<span class="text-2xl font-bold font-display text-primary">12</span>
+<button class="w-8 h-8 rounded bg-white border border-outline-variant flex items-center justify-center hover:bg-surface-container-highest transition-colors active:scale-90">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Visual Slider Section -->
+<div class="space-y-6">
+<div class="flex items-end justify-between">
+<label class="text-sm font-bold text-on-surface tracking-wide uppercase">Overall Completion</label>
+<div class="flex items-baseline gap-1">
+<span class="text-6xl font-display font-extrabold text-primary tabular-nums">74</span>
+<span class="text-2xl font-bold text-secondary">%</span>
+</div>
+</div>
+<div class="relative pt-4">
+<input class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="74"/>
+<div class="flex justify-between text-[10px] text-outline font-bold mt-3 px-1">
+<span>0%</span>
+<span>25%</span>
+<span>50%</span>
+<span>75%</span>
+<span>100%</span>
+</div>
+</div>
+</div>
+<!-- Textareas Section -->
+<div class="space-y-8">
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-bold text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="format_list_bulleted">format_list_bulleted</span>
+                  Work Description
+                </label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg p-4 text-on-surface focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all outline-none resize-none font-body leading-relaxed placeholder:text-outline" placeholder="Describe the milestones achieved this week..." rows="4"></textarea>
+</div>
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-bold text-on-surface">
+<span class="material-symbols-outlined text-error text-lg" data-icon="warning">warning</span>
+                  Obstacles &amp; Blockers
+                </label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg p-4 text-on-surface focus:ring-4 focus:ring-error/10 focus:border-error transition-all outline-none resize-none font-body leading-relaxed placeholder:text-outline" placeholder="List any delays, material shortages, or weather issues..." rows="3"></textarea>
+</div>
+</div>
+<!-- Action Button -->
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary font-display font-extrabold text-lg py-5 rounded-xl flex items-center justify-center gap-3 active:scale-[0.98] transition-all hover:bg-primary/90 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="send" data-weight="fill" style="font-variation-settings: 'FILL' 1;">send</span>
+                Submit Report
+              </button>
+<p class="text-center text-xs text-on-surface-variant font-medium">
+                Last saved: 14:32 PM • Project Manager: Sarah Jenkins
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

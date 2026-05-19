@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NexProject - Project Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#ffffff",
+                        "tertiary-fixed": "#e8d0ff",
+                        "surface-container": "#f8fafc",
+                        "on-primary-fixed": "#001f2e",
+                        "surface-dim": "#f1f5f9",
+                        "inverse-primary": "#0a4c6e",
+                        "surface-variant": "#f1f5f9",
+                        "surface": "#ffffff",
+                        "secondary-fixed-dim": "#88b4cc",
+                        "inverse-surface": "#0a0e1a",
+                        "surface-container-highest": "#e2e8f0",
+                        "on-secondary-container": "#1a3a4e",
+                        "outline": "#cbd5e1",
+                        "secondary-container": "#c0d8e8",
+                        "outline-variant": "#e2e8f0",
+                        "on-secondary-fixed": "#0d1f2b",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#7c3aed",
+                        "surface-container-high": "#f1f5f9",
+                        "primary": "#0ea5e9",
+                        "on-tertiary-container": "#1a002e",
+                        "surface-tint": "#0ea5e9",
+                        "secondary": "#2a4a5e",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#c0d8e8",
+                        "on-error-container": "#3d1414",
+                        "on-primary-fixed-variant": "#004d73",
+                        "tertiary-container": "#f3e8ff",
+                        "tertiary-fixed-dim": "#c8a0f0",
+                        "on-secondary-fixed-variant": "#2a4a5e",
+                        "error": "#ef4444",
+                        "on-background": "#0f172a",
+                        "inverse-on-surface": "#ffffff",
+                        "error-container": "#fee2e2",
+                        "primary-fixed": "#c8eaff",
+                        "surface-container-low": "#f8fafc",
+                        "on-surface": "#0f172a",
+                        "primary-container": "#e0f2fe",
+                        "on-tertiary-fixed": "#1a002e",
+                        "primary-fixed-dim": "#7dd3fc",
+                        "on-tertiary-fixed-variant": "#4d2a73",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#004d73",
+                        "on-surface-variant": "#64748b",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Geist"],
+                        "display": ["Geist"],
+                        "body": ["Geist"],
+                        "label": ["Geist"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Geist', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-outline-variant bg-surface-container-low flex flex-col p-4 gap-2">
+<div class="flex items-center gap-3 px-2 py-4">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">apartment</span>
+</div>
+<div>
+<h1 class="text-xl font-headline font-bold tracking-tighter text-on-surface">NexProject</h1>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">CV Fenomena</p>
+</div>
+</div>
+<nav class="mt-6 flex flex-col gap-1">
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-lg px-3 py-2 border-l-4 border-primary font-body text-label-md tracking-normal font-medium transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">apartment</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-lg font-body text-label-md tracking-normal font-medium transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-lg font-body text-label-md tracking-normal font-medium transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+<span>Tasks</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-lg font-body text-label-md tracking-normal font-medium transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span>Team</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-lg font-body text-label-md tracking-normal font-medium transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary py-2.5 rounded-lg font-bold text-sm mb-4 transition-transform duration-150 active:scale-95 shadow-sm shadow-primary/20">
+            New Plan
+        </button>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-lg font-body text-label-md tracking-normal font-medium transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span>Profile</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 border-b border-outline-variant bg-background/80 backdrop-blur-md z-10 flex justify-between items-center px-8">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-full py-1.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-surface-variant rounded-full p-2 text-on-surface-variant transition-all active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-surface-variant rounded-full p-2 text-on-surface-variant transition-all active:scale-95">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant mx-2"></div>
+<button class="flex items-center gap-3 px-3 py-1.5 hover:bg-surface-variant rounded-lg transition-all active:scale-95">
+<img alt="Project Manager" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGszHD4px3cne_dPhL81Ex9U6vNUOos8j38fujGxLxb_lIMEVgaW2Dj93eyQknyBd2QOodpsyvTBBQms-ATlQ_4AgTEYV35dk6LRzzABqIw4YMWJWyBk2hxpNRdYy_l9fPnQ9KnVEASPEPuisjX3nttu3uN6KwtW-VgXz76oxflKFD_CkW9Fx83ijCarj6gElZG6DeqU-CSMBbi1FsZ82NP5D2nh4L3G6lW1ywL9VjM63Gb-NHK-YEuqNpxMq0gn2fUDUELgtTixs"/>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+</div>
+</header>
+<!-- Project Canvas -->
+<div class="mt-16 p-8">
+<!-- Hero Section -->
+<section class="mb-10 grid grid-cols-1 lg:grid-cols-4 gap-8 items-end">
+<div class="lg:col-span-3">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">In Progress</span>
+<span class="text-on-surface-variant text-sm font-medium tracking-tight">Client: PT Teknologi Nusantara</span>
+</div>
+<h2 class="text-5xl font-display font-extrabold tracking-tighter text-on-surface">Modern ERP Implementation</h2>
+</div>
+<div class="flex justify-start lg:justify-end">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="109.3" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-2xl font-display font-bold text-on-surface">70%</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">Progress</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Tabs -->
+<div class="flex border-b border-outline-variant mb-8 gap-8 overflow-x-auto no-scrollbar">
+<button class="pb-4 border-b-2 border-primary text-primary font-bold text-sm whitespace-nowrap">Ringkasan</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-sm whitespace-nowrap transition-colors">Anggota Tim</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-sm whitespace-nowrap transition-colors">Tugas</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-sm whitespace-nowrap transition-colors">Laporan</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-sm whitespace-nowrap transition-colors">Jadwal</button>
+</div>
+<!-- Bento Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Summary Card -->
+<div class="lg:col-span-2 bg-white border border-outline-variant rounded-xl p-6 flex flex-col shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-headline font-bold text-on-surface">Project Summary</h3>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-variant p-1 rounded-md transition-colors">more_vert</button>
+</div>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                    The Modern ERP Implementation project aims to centralize all internal workflows, financial tracking, and resource management for PT Teknologi Nusantara. Phase 2 focuses on data migration and custom module development for logistics.
+                </p>
+<div class="grid grid-cols-3 gap-4 mt-auto">
+<div class="bg-surface-container rounded-lg p-4 border border-outline-variant">
+<span class="text-on-surface-variant text-xs block mb-1">Timeline</span>
+<span class="font-bold text-on-surface">6 Months</span>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-outline-variant">
+<span class="text-on-surface-variant text-xs block mb-1">Budget Used</span>
+<span class="font-bold text-tertiary">45%</span>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-outline-variant">
+<span class="text-on-surface-variant text-xs block mb-1">Health</span>
+<span class="font-bold text-primary">Stable</span>
+</div>
+</div>
+</div>
+<!-- Leader Card -->
+<div class="bg-white border border-outline-variant rounded-xl p-6 relative overflow-hidden group shadow-sm">
+<div class="absolute inset-0 opacity-5 pointer-events-none bg-primary/10">
+<img alt="Background pattern" class="w-full h-full object-cover mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwxWv4qv0hG7OmZx10dbHjnOqrcO221JBh3x9SETWHpt63H76Jhf5Z99DNOAvDB-wowRX1A5BPGZMm_BYjVdN3nW5Te4fv-1s3fqPBdwqWFMYIHFEA4eaKwHRkBNm_j4Uu9JGHEpQNvd3MCKtQe0W6uS_LVk1glArKwxJpyRW3H5LX8q0Mpwx6MWNOGuPevbNpuOBxIBExBg_3hLOBHr-4jyzolr1zZob3zQRGl7-n1nsSJIDmUje7qVvOFXlMBquNyizxEGHJmu0"/>
+</div>
+<h3 class="text-lg font-headline font-bold mb-6 relative text-on-surface">Project Lead</h3>
+<div class="flex flex-col items-center relative">
+<div class="w-24 h-24 rounded-full p-1 border-2 border-primary mb-4 bg-white shadow-md">
+<img alt="Adrian Pratama" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1zhiq4VhsPUo6NRq1mdRl9OurxxXK6_OZuFWf9b31CTzIsKb_63m6cr-Ua-xuv9BZ3JQmUvS9NTB5nTdtFDfedlMIQMCaBr5Fc94fL_T7ODmuEy5Za8aMT2ZduP464RXSTvboT3dqFcm1JCOPRfOsyTPhc8jZmG2aX1WIsLH47oe6C8XOh48WzFP1rXec7XyaVp2vG-ECfR8FQm2y_a7qkXJlVtg-rfCDC5KMgcrA863LmlE7n_SS8S2XQ9gdW77k-DoeuqL5IGI"/>
+</div>
+<h4 class="text-xl font-bold text-on-surface">Adrian Pratama</h4>
+<p class="text-on-surface-variant text-sm mb-4">Senior Solutions Architect</p>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 transition-all shadow-sm">View Profile</button>
+</div>
+</div>
+<!-- Team Section -->
+<div class="lg:col-span-3 mt-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-headline font-bold text-on-surface">Team Members</h3>
+<button class="flex items-center gap-2 bg-white text-primary border border-primary/20 px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-sm">person_add</span>
+                        + Tambah Anggota
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Member 1 -->
+<div class="bg-white border border-outline-variant p-4 rounded-xl flex items-center gap-4 hover:border-primary hover:shadow-md transition-all group cursor-pointer shadow-sm">
+<img alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzcIrhu5y8kyVzbeHm35sa0wCYuSqujC-OnnRlTfltMjgvhN71ZBDK0U-hPuSC0CY4kRp8ZqqgEd47Bear6olsK7j1E35nBCvn_bgVtnLrJzu5n9EqVX0CwFlT9G7F8R7JeO_XmYAhBXQZdW6G1ghD2JE274uQiF2VgHKJyuBKGUvsF6R_gvfe58Po2f0A7oPpWNigerV-TpDRKwRoc-lvI0YaPz8HnY-43caVuzn4ktIkhSTxcH8vZdE_r4zky4pwxti5O6xNqSo"/>
+<div>
+<h5 class="font-bold text-sm text-on-surface">Sarah Chen</h5>
+<span class="bg-primary-container text-on-primary-container px-2 py-0.5 rounded text-[10px] font-bold">UI/UX Lead</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">mail</span>
+</div>
+<!-- Member 2 -->
+<div class="bg-white border border-outline-variant p-4 rounded-xl flex items-center gap-4 hover:border-primary hover:shadow-md transition-all group cursor-pointer shadow-sm">
+<img alt="Deni Setiawan" class="w-12 h-12 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWdTC8lxvve80mhvEfVphkbyU1uLdI9dFBS75vd_9z-s83MFSOAXlZrB5H87yDnlmhNAUtyHAW3uYFmJI2s_Hfe0trJmpRZFr_z_fTNHAPdIYYylTZpyLuiYq4GlyF3dk31VKbfLSNE1SY-Lu7-pyHDy0OG4dLBGrYdzWQm2S9T5H2PjuhFn40DYhaqDMu5zdkaZ-_JyCfkbV_G-A3MjDXOFoPOCEgq0M9h3aJk4iPq-f1iyVLtFapTA__g9ZVUqPhlvpu3Nwg6Jc"/>
+<div>
+<h5 class="font-bold text-sm text-on-surface">Deni Setiawan</h5>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold">Backend Eng.</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">mail</span>
+</div>
+<!-- Member 3 -->
+<div class="bg-white border border-outline-variant p-4 rounded-xl flex items-center gap-4 hover:border-primary hover:shadow-md transition-all group cursor-pointer shadow-sm">
+<img alt="Nina Wijaya" class="w-12 h-12 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjmkOdZn3gkjv9SBplwnzN1m3oqF6tcHdqN_drknse1S1wXPna2-6ikDv2lJR_sDmsvLNZdFBRbHzkfDlVcqJAru2Ry-hGQdIckV1_anEnZSPKFh07Ds66Zdlnv8EmgvFe6KIZZt-sLcVjRaJ3CKb-F_is0QiOZNC5GAYtbOp3hU64OQU346tqYtfluD7rb-9AvU6zagnSxnCirJ6sSFenQVf2oO8oYs9A3zpQivnL3Rf_oDwQ9QRv9uCRtldTZ0aPWjd3q_QyM44"/>
+<div>
+<h5 class="font-bold text-sm text-on-surface">Nina Wijaya</h5>
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded text-[10px] font-bold">QA Specialist</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">mail</span>
+</div>
+<!-- Member 4 -->
+<div class="bg-white border border-outline-variant p-4 rounded-xl flex items-center gap-4 hover:border-primary hover:shadow-md transition-all group cursor-pointer shadow-sm">
+<img alt="Budi Santoso" class="w-12 h-12 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuhTEldGAnNqXUOhkcC0PMJnswLiCJX9bPUQts1XzzEqPEdnK7LTTty1mtTznSdlLRurebRWeJxRYZYc_tpoOHfF0ebOkJ4ftihxaFt9E1pvsVw_bm7ThyS2abhR2cLIXjYYlLQVumLORw5ZyqeBVmsh99ZYd9cYt63nrWLK5dt0NmOpDteoUJFUvU08GShz_xVvXyhmUCefdbO4bXHdC2wNyLSMDmMckWr5g1RIfiq0w0omM8G-vMR0NIIoeSsdVbT0EoPkkO5o4"/>
+<div>
+<h5 class="font-bold text-sm text-on-surface">Budi Santoso</h5>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-[10px] font-bold">DevOps</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">mail</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

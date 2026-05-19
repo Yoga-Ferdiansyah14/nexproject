@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NexProject - Tugas Saya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+        }
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: #fcfcf9;
+            color: #1a1c1e;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcfcf9",
+                        "on-background": "#1a1c1e",
+                        "surface": "#ffffff",
+                        "on-surface": "#1a1c1e",
+                        "surface-variant": "#e1e2ec",
+                        "on-surface-variant": "#44474e",
+                        "primary": "#006d3a",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#99f6b4",
+                        "on-primary-container": "#00210d",
+                        "secondary": "#516350",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#d4e8d0",
+                        "on-secondary-container": "#0f1f11",
+                        "tertiary": "#006d3a",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#410002",
+                        "outline": "#74777f",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-low": "#f7f3f1",
+                        "surface-container": "#f1eee9",
+                        "surface-container-high": "#ebe8e3",
+                        "surface-container-highest": "#e5e2de",
+                        "forest-accent": "#14532d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Geist"],
+                        "display": ["Geist"],
+                        "body": ["Geist"],
+                        "label": ["Geist"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-outline-variant bg-surface-container-low flex flex-col p-4 gap-2 z-20">
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-8 h-8 bg-forest-accent rounded flex items-center justify-center text-white font-bold">N</div>
+<div>
+<h1 class="text-xl font-headline font-bold tracking-tighter text-on-surface">NexProject</h1>
+<p class="text-xs text-on-surface-variant">CV Fenomena</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="apartment">apartment</span>
+<span class="font-body text-label-md tracking-normal font-medium">Projects</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body text-label-md tracking-normal font-medium">Dashboard</span>
+</a>
+<!-- Active Navigation State for "Tasks" -->
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-lg px-3 py-2 border-l-4 border-forest-accent active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="font-body text-label-md tracking-normal font-medium">Tasks</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-body text-label-md tracking-normal font-medium">Team</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body text-label-md tracking-normal font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full bg-forest-accent text-white py-2 rounded-lg font-medium mb-4 hover:opacity-90 transition-opacity">New Plan</button>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-body text-label-md tracking-normal font-medium">Profile</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 border-b border-outline-variant bg-surface z-10 flex justify-between items-center px-8">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-1.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-forest-accent focus:outline-none text-on-surface" placeholder="Search tasks..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-surface-container rounded-full p-2 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-surface-container rounded-full p-2 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-outline-variant mx-2"></div>
+<button class="text-sm font-medium px-4 py-1.5 rounded-lg border border-outline hover:bg-surface-container transition-colors">Export Data</button>
+<button class="text-sm font-medium px-4 py-1.5 rounded-lg bg-forest-accent text-white hover:opacity-90 transition-colors">Create Project</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-8 min-h-screen">
+<div class="max-w-5xl mx-auto">
+<!-- Page Header -->
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-headline font-bold tracking-tight text-on-surface">Tugas Saya</h2>
+<p class="text-on-surface-variant mt-1">Kelola daftar penugasan Tenaga Ahli Anda hari ini.</p>
+</div>
+<div class="flex bg-surface-container-high rounded-lg p-1 border border-outline-variant">
+<button class="px-4 py-1.5 text-sm font-medium bg-white text-on-surface shadow-sm rounded-md">Semua</button>
+<button class="px-4 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors">Berjalan</button>
+<button class="px-4 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors">Selesai</button>
+<button class="px-4 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors">Terlambat</button>
+</div>
+</div>
+<!-- Task List Container -->
+<div class="flex flex-col gap-4">
+<!-- Task Card 1 (In Progress) -->
+<div class="group relative bg-surface border border-outline-variant rounded-xl overflow-hidden hover:border-forest-accent/50 hover:shadow-md transition-all flex items-stretch">
+<div class="w-1.5 bg-forest-accent"></div>
+<div class="flex-1 p-5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-forest-accent transition-colors">Analisis Struktur Menara BTS Zone A</h3>
+<div class="flex items-center gap-3 text-sm">
+<span class="text-on-surface-variant font-medium">Pembangunan Jaringan 5G Nasional</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span>
+<span>Deadline: 24 Okt 2023</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden">
+<img alt="Member" class="w-full h-full object-cover" data-alt="A professional headshot of a female structural engineer wearing a modern headset in a high-tech office environment. The lighting is crisp and cool, reflecting a professional dark mode aesthetic with violet accents. The background is softly blurred with digital blueprint elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3rMChM07Gthh1o2XCW40OMsegMDmPLjYlTAy5lTZH89sZ_Ym1xAElZtppmj6MboYndk6XurHJ7M8PwaHvd54eU4ghu-QHEGEJIBDvhRKGKKhrkbXWlqOrXYCa7gbMO7WcsotxNvZLm2e868QaMscPymw964ocNyxWpwTNRRc93wtDBB6QXlwkbkWgx0WWx0kfmiK7vLHeD05A3dC6e41vtGJ0qNM8fKU9NnX4lZp71cC_oDX36xAdwofQAwsuKOF41Glj9f6uVT4"/>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+2</div>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 bg-surface-container-low border border-outline-variant px-4 py-2 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-colors">
+<span class="text-on-surface">Dalam Pengerjaan</span>
+<span class="material-symbols-outlined text-xs text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Task Card 2 (Urgent/Near Deadline) -->
+<div class="group relative bg-surface border border-outline-variant rounded-xl overflow-hidden hover:border-error/50 hover:shadow-md transition-all flex items-stretch">
+<div class="w-1.5 bg-error"></div>
+<div class="flex-1 p-5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-error transition-colors">Review Dokumen AMDAL - Cluster C</h3>
+<div class="flex items-center gap-3 text-sm">
+<span class="text-on-surface-variant font-medium">Rehabilitasi Lahan Gambut</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<div class="flex items-center gap-1 text-error font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="priority_high">priority_high</span>
+<span>Deadline: Hari Ini (17:00)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden">
+<img alt="Member" class="w-full h-full object-cover" data-alt="A close-up portrait of an environmental scientist with focused expression, looking at off-screen data. The scene is lit with cinematic low-key lighting using deep obsidian shadows and sharp emerald highlights. The style is ultra-modern, professional, and developer-grade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA47BtNBcVtajpIQyPtdQPAYBc3Vpq9CvfeXzXL2GkkIpNv8L5XRUYArB61-wynd1q5MbrYQ_GnIEQEISuz4kXf-7vbOmt0VDDccGTtlAo7Tud_prHrg1KvZOl_gEZOVSyRvl3cjIG7PnGoO0Qx-IKW2IIsnZfBUXhNqKMnSwQnGlt9I8pi94_AbnCSJwezKbPLsC4QkWIulLk1IeeneQ5TGxbXb1vqZ0tpOiqjQoi9ldfQzPlooXb0Y6Qtpf4RroUcmoq9zEi4LGI"/>
+</div>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 bg-error-container text-on-error-container border border-error/20 px-4 py-2 rounded-lg text-sm font-bold hover:bg-error/10 transition-colors">
+<span>Prioritas Utama</span>
+<span class="material-symbols-outlined text-xs" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Task Card 3 (New/Pending) -->
+<div class="group relative bg-surface border border-outline-variant rounded-xl overflow-hidden hover:border-forest-accent/50 hover:shadow-md transition-all flex items-stretch">
+<div class="w-1.5 bg-surface-variant"></div>
+<div class="flex-1 p-5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-forest-accent transition-colors">Survey Lokasi Topografi - Tahap 2</h3>
+<div class="flex items-center gap-3 text-sm">
+<span class="text-on-surface-variant font-medium">Masterplan Kawasan Wisata Bahari</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span>
+<span>Deadline: 30 Okt 2023</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden">
+<img alt="Member" class="w-full h-full object-cover" data-alt="A portrait of a male surveyor wearing high-visibility gear in a professional studio setting with dark, moody lighting. The background features high-contrast technical outlines of topographic maps. The color palette is dominated by zinc grays and soft violet accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATt6YTYsW9_Rf1AzpMpnkWCGgDzCC9HQ_ucwHpEDy46uyA9jTSpFxlhiIlDnsvpYzTbNH1M0UGSFjj3bQXVFCYDsNqUJEHJqt5WXDTFOPkhddsysXE2OwzWCuQWccToTD9BDIjz5ZlyMxzL9-MkZ2FADvuufLZVfMCrJsA8UEqf1kLsl_GTRQ7IMX6Qcj94WoNDcrjUDXUdKvIRtqQFKW27DmNGqBctJJf5Sl7aH332RikeCAJnP1mJUSyeMCygo6Wh6SJlwC3TR0"/>
+</div>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 bg-surface-container-low border border-outline-variant px-4 py-2 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-colors">
+<span class="text-on-surface">Belum Dimulai</span>
+<span class="material-symbols-outlined text-xs text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Illustration Placeholder -->
+<div class="mt-12 flex flex-col items-center justify-center p-12 border-2 border-dashed border-outline-variant rounded-3xl bg-surface-container-low/50">
+<div class="w-24 h-24 mb-6 relative">
+<div class="absolute inset-0 bg-forest-accent/10 rounded-full blur-2xl"></div>
+<div class="relative flex items-center justify-center w-full h-full bg-white rounded-full border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-4xl text-forest-accent" data-icon="playlist_add_check">playlist_add_check</span>
+</div>
+</div>
+<h4 class="text-xl font-bold text-on-surface mb-2">Semua Tugas Beres?</h4>
+<p class="text-on-surface-variant text-center max-w-sm">Tarik nafas sejenak. Jika tidak ada tugas baru, Anda bisa mengecek status project lain atau memperbarui profil keahlian Anda.</p>
+</div>
+</div>
+<!-- Dashboard Style Bento Grid Preview -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<p class="text-sm text-on-surface-variant mb-1">Total Jam Minggu Ini</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">32.5</span>
+<span class="text-sm text-forest-accent font-medium">hrs</span>
+</div>
+<div class="mt-4 w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-forest-accent h-full w-[70%]"></div>
+</div>
+</div>
+<div class="p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<p class="text-sm text-on-surface-variant mb-1">Tingkat Penyelesaian</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">84</span>
+<span class="text-sm text-forest-accent font-medium">%</span>
+</div>
+<div class="mt-4 w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-forest-accent h-full w-[84%]"></div>
+</div>
+</div>
+<div class="p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<p class="text-sm text-on-surface-variant mb-1">Project Aktif</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">04</span>
+<span class="text-sm text-on-surface-variant font-medium">Tim</span>
+</div>
+<div class="mt-4 flex -space-x-2">
+<div class="w-6 h-6 rounded-full border border-white bg-forest-accent/10 text-forest-accent text-[8px] flex items-center justify-center font-bold">P1</div>
+<div class="w-6 h-6 rounded-full border border-white bg-secondary-container text-on-secondary-container text-[8px] flex items-center justify-center font-bold">P2</div>
+<div class="w-6 h-6 rounded-full border border-white bg-outline-variant text-on-surface-variant text-[8px] flex items-center justify-center font-bold">P3</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

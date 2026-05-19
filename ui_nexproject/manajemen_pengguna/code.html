@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed-variant": "#2a4a5e",
+                "tertiary-fixed-dim": "#c8a0f0",
+                "surface-container-lowest": "#ffffff",
+                "error": "#ff6b6b",
+                "on-surface-variant": "#4a6070",
+                "surface-dim": "#f0f4f8",
+                "on-background": "#0a0e1a",
+                "surface-container": "#f8fafc",
+                "on-primary-fixed": "#001f2e",
+                "on-error": "#ffffff",
+                "surface-container-high": "#edf2f7",
+                "secondary-fixed": "#c0d8e8",
+                "secondary-container": "#e0f2fe",
+                "on-secondary": "#001f2e",
+                "secondary": "#065f46",
+                "primary-fixed": "#c8eaff",
+                "on-secondary-fixed": "#0d1f2b",
+                "tertiary": "#065f46",
+                "secondary-fixed-dim": "#88b4cc",
+                "primary": "#059669",
+                "on-primary": "#ffffff",
+                "tertiary-fixed": "#e8d0ff",
+                "inverse-primary": "#7dd3fc",
+                "primary-fixed-dim": "#7dd3fc",
+                "surface": "#ffffff",
+                "on-tertiary-fixed": "#1a002e",
+                "inverse-surface": "#0a0e1a",
+                "error-container": "#fee2e2",
+                "on-primary-fixed-variant": "#004d73",
+                "on-primary-container": "#001f2e",
+                "on-surface": "#0a0e1a",
+                "inverse-on-surface": "#ffffff",
+                "on-tertiary-fixed-variant": "#4d2a73",
+                "surface-container-low": "#ffffff",
+                "surface-container-highest": "#e2e8f0",
+                "tertiary-container": "#dcfce7",
+                "surface-bright": "#ffffff",
+                "on-secondary-container": "#001f2e",
+                "on-tertiary": "#ffffff",
+                "outline-variant": "#e2e8f0",
+                "outline": "#cbd5e1",
+                "on-tertiary-container": "#065f46",
+                "surface-variant": "#f1f5f9",
+                "primary-container": "#dcfce7",
+                "surface-tint": "#059669",
+                "on-error-container": "#991b1b",
+                "background": "#f8fafc"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.5rem",
+                "lg": "1rem",
+                "xl": "1.5rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter"],
+                "display": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-outline-variant bg-surface flex flex-col p-4 gap-2">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-on-primary font-bold">N</div>
+<div>
+<h1 class="text-xl font-headline font-bold tracking-tighter text-on-surface">NexProject</h1>
+<p class="text-[10px] text-on-surface-variant font-medium tracking-widest uppercase">CV Fenomena</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-variant transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="apartment">apartment</span>
+<span class="font-body text-sm font-medium">Projects</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-variant transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-variant transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="font-body text-sm font-medium">Tasks</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-variant transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-body text-sm font-medium">Team</span>
+</a>
+<a class="flex items-center gap-3 bg-primary-container text-on-tertiary-container rounded-lg px-3 py-2 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant pt-4">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-on-surface px-3 py-2 hover:bg-surface-variant transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-body text-sm font-medium">Profile</span>
+</a>
+<button class="mt-4 w-full bg-primary text-on-primary py-2.5 px-4 rounded-lg font-bold text-sm hover:opacity-90 active:scale-[0.98] transition-all">
+            New Plan
+        </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 border-b border-outline-variant z-10 bg-surface flex justify-between items-center px-8">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Search team members..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 border border-outline-variant px-4 py-2 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-variant transition-all">
+                Export Data
+            </button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all shadow-sm">
+                Tambah Pengguna
+            </button>
+<div class="flex items-center gap-1 border-l border-outline-variant ml-2 pl-4">
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all text-on-surface-variant"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all text-on-surface-variant"><span class="material-symbols-outlined" data-icon="help_outline">help_outline</span></button>
+<img alt="User Avatar" class="w-8 h-8 rounded-full border border-outline-variant ml-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd3ujI8qxge-tTkMXbzEyaawGmHmTqi-6eahK-Gm__9LUn-sKBFQe9JeS0pd89JbHVDf7nrOVx49Kr6kVZap7Q4JpbKJq6-wnvkv00XH8iA8ion1LwAbVFACRrIwoSiVtW1K6tAgmXvG3Opa4je0bbSJXWabt_xma_FpCuwxA5e-GftmCG2H3gijtI7R25p9XhM-m_PrmC7Ji1FV9bHfrq2IOv9lznLAC0OHkkciEcgLwBC-t1nKzEgMrlDJspinokuaZGGPTLMlM"/>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<div class="mt-16 p-8 flex-1">
+<div class="mb-8">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-on-surface">User Management</h2>
+<p class="text-on-surface-variant mt-1">Manage administrative permissions and user roles across the project ecosystem.</p>
+</div>
+<!-- Table Container -->
+<div class="bg-surface rounded-xl border border-outline-variant overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">User</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Role</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Email Address</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- User Row 1 -->
+<tr class="hover:bg-surface-variant/50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full border border-outline-variant object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcTVLz3VseULBIpDsRlalcnvLr_qWYKO7u-J9eeaFyhA3420xAjMRsO9mgMr9-5lqxuAKnKiYOYCofJqZPXB9wx3KGLY4fY80GDUTWQIroEIR-ZbFzSyFdLS97QZWijLaF3DB3DzVfTwheET_NnawyWQ-V9TBx0QUYqnLIIngmRldvDIoaGmvD23mF3644J2Ha7wBHc229Iq-0PRBZXSm3QGXKiEE1uLvqIc8q-78TXP3B4IaWP9dPmJyGNSiwcfnR9iPSEQ4Ejik"/>
+<div>
+<div class="font-bold text-on-surface">Alex Rivers</div>
+<div class="text-xs text-on-surface-variant">Active 2m ago</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center bg-primary-container text-primary border border-primary/20 px-2.5 py-0.5 rounded-full text-xs font-bold">
+                                Admin
+                                <span class="material-symbols-outlined text-[14px] ml-1 cursor-pointer" data-icon="expand_more">expand_more</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">alex.rivers@nexproject.co</td>
+<td class="px-6 py-5">
+<span class="flex items-center gap-1.5 text-primary text-xs font-bold">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Active
+                            </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- User Row 2 -->
+<tr class="hover:bg-surface-variant/50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full border border-outline-variant object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk0aDnb7dcBNuKQzHZXhO_z8CyPj9hXZP3NdmKun1vuSMtFpmH3SrcpbKhgY5Nkk3MOOxIKXZ1idR-A8ItlUKmvq29H6e3n670vUEsetAjpALq9R1qm3DHt0Z-5GfkSkK1QgkLOGa2o4huFebwOEobsOQ8kceSb_k2l2H-Q20YkfxgvH_0VY1kUOc2TddG1c0GkyRPNDy06Jd_LtTSaXuJBn8Pcj_me37Dav2hHlOefLvFkAACYftXFzov4VlHgdFr_uHglBlPnII"/>
+<div>
+<div class="font-bold text-on-surface">Sarah Chen</div>
+<div class="text-xs text-on-surface-variant">Active 1h ago</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center bg-surface-container-highest text-on-surface-variant border border-outline-variant px-2.5 py-0.5 rounded-full text-xs font-bold">
+                                Editor
+                                <span class="material-symbols-outlined text-[14px] ml-1 cursor-pointer" data-icon="expand_more">expand_more</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">s.chen@fenomena.id</td>
+<td class="px-6 py-5">
+<span class="flex items-center gap-1.5 text-primary text-xs font-bold">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Active
+                            </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Skeleton State Row 1 -->
+<tr class="animate-pulse">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high"></div>
+<div class="space-y-2">
+<div class="h-3 w-24 bg-surface-container-high rounded"></div>
+<div class="h-2 w-16 bg-surface-container-high rounded opacity-50"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="h-5 w-16 bg-surface-container-high rounded-full"></div>
+</td>
+<td class="px-6 py-5">
+<div class="h-3 w-40 bg-surface-container-high rounded"></div>
+</td>
+<td class="px-6 py-5">
+<div class="h-3 w-12 bg-surface-container-high rounded"></div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="h-6 w-6 bg-surface-container-high rounded-full ml-auto"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Stats/Cards -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="col-span-1 md:col-span-2 bg-surface rounded-xl border border-outline-variant p-6 relative overflow-hidden group shadow-sm">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="shield">shield</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Security Overview</h3>
+<p class="text-on-surface-variant text-sm mb-4 max-w-md">All admin actions are logged and audited. Multi-factor authentication is currently enabled for 85% of your team members.</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                    Review Access Logs <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="bg-primary text-on-primary rounded-xl p-6 flex flex-col justify-between shadow-md">
+<span class="material-symbols-outlined text-3xl" data-icon="group_add">group_add</span>
+<div>
+<div class="text-3xl font-extrabold tracking-tighter">12/20</div>
+<div class="text-sm font-medium opacity-90">Seats Occupied</div>
+<div class="mt-4 w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
+<div class="bg-white h-full w-[60%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Slide-over Component (Visible state mock for preview) -->
+<div class="fixed inset-0 bg-on-background/30 backdrop-blur-[2px] z-50 transition-opacity pointer-events-none opacity-0"></div>
+<div class="fixed right-0 top-0 h-full w-full max-w-md bg-surface shadow-2xl z-[60] border-l border-outline-variant flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<h3 class="text-xl font-headline font-bold text-on-surface">Tambah Pengguna</h3>
+<button class="hover:bg-surface-variant p-2 rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="p-6 flex-1 space-y-6 overflow-y-auto">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface">Email Address</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary focus:outline-none" placeholder="example@nexproject.co" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface">Full Name</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary focus:outline-none" placeholder="e.g. John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface">Select Role</label>
+<div class="grid grid-cols-2 gap-3">
+<label class="relative flex flex-col p-4 border border-outline-variant rounded-xl cursor-pointer hover:bg-surface-variant/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary-container/30">
+<input checked="" class="absolute right-3 top-3 accent-primary" name="role" type="radio"/>
+<span class="font-bold text-sm text-on-surface">Viewer</span>
+<span class="text-xs text-on-surface-variant mt-1 leading-tight">Read-only access to all projects.</span>
+</label>
+<label class="relative flex flex-col p-4 border border-outline-variant rounded-xl cursor-pointer hover:bg-surface-variant/50 transition-all has-[:checked]:border-primary has-[:checked]:bg-primary-container/30">
+<input class="absolute right-3 top-3 accent-primary" name="role" type="radio"/>
+<span class="font-bold text-sm text-on-surface">Editor</span>
+<span class="text-xs text-on-surface-variant mt-1 leading-tight">Can create and edit project data.</span>
+</label>
+</div>
+</div>
+<div class="bg-primary-container/20 p-4 rounded-xl border border-primary/10">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+<p class="text-xs text-on-surface-variant leading-relaxed font-medium">Adding a user will send an automated invitation email. They must accept before joining the dashboard.</p>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-outline-variant bg-surface-container-low flex gap-3">
+<button class="flex-1 border border-outline-variant py-2.5 rounded-lg font-bold text-sm hover:bg-surface-variant transition-colors text-on-surface">Batal</button>
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity shadow-sm">Undang</button>
+</div>
+</div>
+</body></html>
